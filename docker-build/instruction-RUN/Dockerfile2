@@ -1,0 +1,3 @@
+FROM busybox
+RUN /bin/sh -c "echo 'hello world'"
+RUN /bin/sh -c "echo $HOME" # $HOME substituted
