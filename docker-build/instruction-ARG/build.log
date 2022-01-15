@@ -1,0 +1,45 @@
+$ docker build . --build-arg EMAIL=admin@example.com --no-cache --progress=plain 2>&1 | tee build.log
+
+#1 [internal] load build definition from Dockerfile
+#1 sha256:d700190c55f8c22aa0f7e4187cd8f59ceb31e3f065d0155df241551fc63c0f5d
+#1 transferring dockerfile: 320B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:9599d61bc3e416833f0007757b67af253a99b386e67c75b4b6bdc2c16bf5eac1
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/busybox:latest
+#3 sha256:da853382a7535e068feae4d80bdd0ad2567df3d5cd484fd68f919294d091b053
+#3 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/busybox:latest
+#4 sha256:08a03f3ffe5fba421a6403c31e153425ced631d108868f30e04985f99d69326e
+#4 CACHED
+
+#5 [2/5] RUN ["/bin/sh", "-c", "echo $VERSION"] # empty value
+#5 sha256:e2165e83dd0a3c6fd643ee4d35c0ec0d05e158f812f4677a4a4b6d0d371707d7
+#5 0.249 
+#5 DONE 0.3s
+
+#6 [3/5] RUN ["/bin/sh", "-c", "echo jongwoo"]
+#6 sha256:64519f66e553b3f6695615fcfa47f696d6db75c522086a2a051fabd3cbb0dd0e
+#6 0.433 jongwoo
+#6 DONE 0.5s
+
+#7 [4/5] RUN ["/bin/sh", "-c", "echo Yoo"]
+#7 sha256:3caa0916ed1d80e65b5963a8bf87dec858c2c43510ef06e5c2dc9c0f32dbbc12
+#7 0.326 Yoo
+#7 DONE 0.3s
+
+#8 [5/5] RUN ["/bin/sh", "-c", "echo admin@example.com"]
+#8 sha256:6ef108095f61b80675855a5fe2a2e5a16eb4f0c733d37f59f8ea6e550e75d62d
+#8 0.373 admin@example.com
+#8 DONE 0.4s
+
+#9 exporting to image
+#9 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#9 exporting layers 0.0s done
+#9 writing image sha256:8adbfa5413835c3c51c14bcfb66011d39effd4098eac94c242035b47be8813fd done
+#9 DONE 0.2s
