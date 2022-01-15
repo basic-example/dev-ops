@@ -1,0 +1,55 @@
+$ docker build . --no-cache --progress=plain 2>&1 | tee build.log
+
+#1 [internal] load build definition from Dockerfile
+#1 sha256:621429c9bbd4b9644c59d43cc05b8d87c9298daf58fa159c6694d57e1d5cb818
+#1 transferring dockerfile: 386B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:8517fa5bce45910bec5f1a20372570988fec127af5ddee676274ad11793becb0
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/busybox:latest
+#3 sha256:da853382a7535e068feae4d80bdd0ad2567df3d5cd484fd68f919294d091b053
+#3 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/busybox
+#4 sha256:08a03f3ffe5fba421a6403c31e153425ced631d108868f30e04985f99d69326e
+#4 CACHED
+
+#5 [2/7] RUN ["/bin/sh", "-c", "echo null"]
+#5 sha256:d346dfdf2e9b5df6dfce4ac58456cfd0d3efd575c3873f1e678afe4c256a35f9
+#5 0.280 null
+#5 DONE 0.3s
+
+#6 [3/7] RUN ["/bin/sh", "-c", "echo not empty value"]
+#6 sha256:e906cedacc721e016da8a05a7d7f83f4361e2a90456475d0dfd9fe297cc4b947
+#6 0.459 not empty value
+#6 DONE 0.5s
+
+#7 [4/7] RUN ["/bin/sh", "-c", "echo empty value"]
+#7 sha256:12dbf57a2ed9e228350c9d931d41bd8aa7d59eaed6165a420931ee052d3d26c8
+#7 0.329 empty value
+#7 DONE 0.3s
+
+#8 [5/7] RUN ["/bin/sh", "-c", "echo "]
+#8 sha256:c580e955a75c134511db625339e90626857b4ee6ac200225b14eea21337484e8
+#8 0.380
+#8 DONE 0.4s
+
+#9 [6/7] RUN ["/bin/sh", "-c", "echo ${BAZ:-not set value}"]
+#9 sha256:3835913be3f8dbe2de47b131710f59546b11870454c7438a1adc4a2e0d737ca7
+#9 0.371 not set value
+#9 DONE 0.4s
+
+#10 [7/7] RUN ["/bin/sh", "-c", "echo ${BAZ:+not set value}"]
+#10 sha256:61422a6a3cf4abb93d3055641ef0d2875486ecd3ac8e86370ba9e7ff9c03f477
+#10 0.515
+#10 DONE 0.5s
+
+#11 exporting to image
+#11 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#11 exporting layers 0.1s done
+#11 writing image sha256:0cff5000034d4f3addb571ab5005fea3499192c224ab4c8d0d6673d9c9added9 done
+#11 DONE 0.2s
