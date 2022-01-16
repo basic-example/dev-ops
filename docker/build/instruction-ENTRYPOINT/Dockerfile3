@@ -1,0 +1,3 @@
+from busybox
+CMD ["/bin/sh", "-c", "echo 'HELLO WORLD1'"]
+ENTRYPOINT ["/bin/sh", "-c", "echo 'HELLO WORLD2'"] #shell form

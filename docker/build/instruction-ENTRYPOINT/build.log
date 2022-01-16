@@ -1,0 +1,25 @@
+$ docker build . --no-cache --progress=plain --rm 2>&1 | tee build.log
+
+#1 [internal] load build definition from Dockerfile
+#1 sha256:396cde9a90f46ea6532cd34e72d96415539fa260fbea83fa6c7e831c82bbd6ec
+#1 transferring dockerfile: 31B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:fce754cb1098b2dc62d91287a5760d56ef38538d6d3dfc1cf6bbdee1bbfff3eb
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/busybox:latest
+#3 sha256:da853382a7535e068feae4d80bdd0ad2567df3d5cd484fd68f919294d091b053
+#3 DONE 1.8s
+
+#4 [1/1] FROM docker.io/library/busybox@sha256:5acba83a746c7608ed544dc1533b87c737a0b0fb730301639a0179f9344b1678
+#4 sha256:febe881d6178d2376f5b4710f437bbc095822c5083b56cd0c294cddec5cb711c
+#4 CACHED
+
+#5 exporting to image
+#5 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#5 exporting layers done
+#5 writing image sha256:5d0fe3b4fc3fc5430324c8dd76315bc0c7765c39d949e44a0ab84a55eeac963f done
+#5 DONE 0.0s

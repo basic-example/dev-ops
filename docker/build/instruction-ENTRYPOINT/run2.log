@@ -1,0 +1,3 @@
+$ docker run -it --rm $(docker build . -f Dockerfile2 -q --no-cache --rm) 2>&1 | tee run2.log
+
+'HELLO WORLD2' /bin/echo 'HELLO WORLD1'
