@@ -1,3 +1,4 @@
 FROM busybox
+ENV HOME='/home/me'
 RUN ["echo", "hello world"]
-RUN ["echo", "$HOME"] # $HOME not substituted
+RUN ["echo", "$HOME"] # exec form($HOME not substituted when build executing)

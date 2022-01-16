@@ -1,35 +1,35 @@
-$ docker build -f Dockerfile4 . --no-cache --progress=plain 2>&1 | tee build4.log
+$ docker build -f Dockerfile4 . --no-cache --progress=plain --rm 2>&1 | tee build4.log
 
 #1 [internal] load build definition from Dockerfile4
-#1 sha256:25bb32a9439ab556c5059eb8b1523b35a4b6886b906f92a553dfdb8c2a36290f
-#1 transferring dockerfile: 151B done
+#1 sha256:e4fbd0c5d57b52f3e4a75ba54229de809e6f05d34118169b5fed7a6a6e253c35
+#1 transferring dockerfile: 163B done
 #1 DONE 0.0s
 
 #2 [internal] load .dockerignore
-#2 sha256:aaf4f038d0119240846dad674d0e00709aad4106086b1cda43a28cf8142d7fba
+#2 sha256:669db7adddc7f02c7e425a0fac0b29c7cf164ab98819baac145ec1a3c650c9d8
 #2 transferring context: 2B done
 #2 DONE 0.0s
 
 #3 [internal] load metadata for docker.io/library/busybox:latest
 #3 sha256:da853382a7535e068feae4d80bdd0ad2567df3d5cd484fd68f919294d091b053
-#3 DONE 1.7s
+#3 DONE 1.8s
 
-#6 [1/3] FROM docker.io/library/busybox@sha256:5acba83a746c7608ed544dc1533b87c737a0b0fb730301639a0179f9344b1678
-#6 sha256:febe881d6178d2376f5b4710f437bbc095822c5083b56cd0c294cddec5cb711c
-#6 CACHED
+#4 [1/3] FROM docker.io/library/busybox@sha256:5acba83a746c7608ed544dc1533b87c737a0b0fb730301639a0179f9344b1678
+#4 sha256:febe881d6178d2376f5b4710f437bbc095822c5083b56cd0c294cddec5cb711c
+#4 CACHED
 
-#4 [2/3] RUN ["/bin/sh", "-c", "echo 'hello world'"]
-#4 sha256:c489422d66be8985d4a90e17f5fdbed892174408c488e974bd94d4787b7a5c6d
-#4 0.320 hello world
-#4 DONE 0.3s
+#5 [2/3] RUN ["/bin/sh", "-c", "echo 'hello world'"]
+#5 sha256:c489422d66be8985d4a90e17f5fdbed892174408c488e974bd94d4787b7a5c6d
+#5 0.205 hello world
+#5 DONE 0.2s
 
-#5 [3/3] RUN ["/bin/sh", "-c", "echo $HOME"] # $HOME substituted
-#5 sha256:44edad78315363bf6ce1ece8cb562716d084833c84b0ee83c59c61ded262f24d
-#5 0.397 /root
-#5 DONE 0.4s
+#6 [3/3] RUN ["/bin/sh", "-c", "echo $HOME"] # shell form($HOME substituted)
+#6 sha256:44edad78315363bf6ce1ece8cb562716d084833c84b0ee83c59c61ded262f24d
+#6 0.490 /root
+#6 DONE 0.5s
 
 #7 exporting to image
 #7 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
 #7 exporting layers 0.0s done
-#7 writing image sha256:f5499b7b5cbb7b1f1943f7769ad8455cc6aeedf334fa3ec03d6f4d7f7ec9b26a done
-#7 DONE 0.1s
+#7 writing image sha256:f04ea2be12b86633d5dc2d52afc76fd01bc771d3ebd9b69d31d33eca11e9acc1 done
+#7 DONE 0.0s

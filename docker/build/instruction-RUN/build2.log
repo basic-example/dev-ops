@@ -1,12 +1,12 @@
-$ docker build -f Dockerfile2 . --no-cache --progress=plain 2>&1 | tee build2.log
+$ docker build -f Dockerfile2 . --no-cache --progress=plain --rm 2>&1 | tee build2.log
 
 #1 [internal] load build definition from Dockerfile2
-#1 sha256:c886a13f6668727df6f4a2370caac1bb4e357948c14f4e5abbef10909628e346
-#1 transferring dockerfile: 135B done
+#1 sha256:8711570711bc7325a7c6fa59dfe5c1a0275112f51ae67f4cc11968cac148d121
+#1 transferring dockerfile: 147B done
 #1 DONE 0.0s
 
 #2 [internal] load .dockerignore
-#2 sha256:d683ed792bb744f7bbbca2d05f0cd8032eb934f9bc0f1633472ba9368558b4d8
+#2 sha256:6cfbf469d620f80f0c40f8fc12595c57e0f1b511bfe7312abaa09e1b86d955ec
 #2 transferring context: 2B done
 #2 DONE 0.0s
 
@@ -20,16 +20,16 @@ $ docker build -f Dockerfile2 . --no-cache --progress=plain 2>&1 | tee build2.lo
 
 #5 [2/3] RUN /bin/sh -c "echo 'hello world'"
 #5 sha256:82a7de7c1d8151274631a5ac52ebf40f687d2abeeea80f83d069986b1f3ae32c
-#5 0.294 hello world
-#5 DONE 0.3s
+#5 0.221 hello world
+#5 DONE 0.2s
 
-#6 [3/3] RUN /bin/sh -c "echo $HOME" # $HOME substituted
-#6 sha256:a3ae7472ec5fdcf5149cb1acb78f4dc8bea217bc2cb42abd34e92b0e5f32ab13
-#6 0.471 /root
-#6 DONE 0.5s
+#6 [3/3] RUN /bin/sh -c "echo $HOME" # shell form($HOME substituted)
+#6 sha256:7bfa8694e79ca00711796fac96213e5aab934e68631d1ff6be8f96b124752fbe
+#6 0.371 /root
+#6 DONE 0.4s
 
 #7 exporting to image
 #7 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
 #7 exporting layers 0.1s done
-#7 writing image sha256:c3d1b34aaf5865b4b9833b3f4eaf614e11ed78d38fcf797d53feba1f5e3f247d done
+#7 writing image sha256:7c94d604b0b52fc9fee1f88334abd9a46249762f5e513c4f677afe1b30e06f5a done
 #7 DONE 0.1s

@@ -1,3 +1,3 @@
 FROM busybox
 RUN echo "hello world"
-RUN echo "$HOME" # $HOME substituted
+RUN echo "$HOME" # shell form($HOME substituted)
