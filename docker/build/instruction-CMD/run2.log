@@ -1,0 +1,3 @@
+docker run -it $(docker build -q . --no-cache) echo 'hi' 2>&1 | tee run2.log
+
+hi
