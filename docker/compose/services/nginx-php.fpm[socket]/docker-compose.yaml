@@ -1,0 +1,21 @@
+version: "3"
+services:
+  php-fpm:
+    build:
+      context: ./config/php-fpm/
+    volumes:
+      - ./src/:/var/www/html/
+      - ./config/php-fpm/zz-docker.conf:/usr/local/etc/php-fpm.d/zz-docker.conf
+      - php_unix_socket:/run/php/
+  nginx:
+    image: nginx:latest
+    depends_on:
+      - php-fpm
+    ports:
+      - "80:80"
+    volumes:
+      - ./src/:/var/www/html/
+      - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - php_unix_socket:/run/php/
+volumes:
+  php_unix_socket:
